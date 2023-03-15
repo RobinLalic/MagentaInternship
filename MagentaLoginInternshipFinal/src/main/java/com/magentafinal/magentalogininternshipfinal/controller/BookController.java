@@ -3,6 +3,7 @@ package com.magentafinal.magentalogininternshipfinal.controller;
 import com.magentafinal.magentalogininternshipfinal.model.Book;
 import com.magentafinal.magentalogininternshipfinal.model.User;
 import com.magentafinal.magentalogininternshipfinal.repository.BookRepository;
+import com.magentafinal.magentalogininternshipfinal.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,12 +14,12 @@ import java.util.List;
 @RequestMapping("/api")
 public class BookController {
 
-    private final BookRepository bookRepository;
+    private final BookService bookService;
     @GetMapping("/books")
-    List<Book> getBooks() { return bookRepository.findAll(); }
+    List<Book> getBooks() { return bookService.getBooks(); }
 
     @PostMapping("/books")
     Book createBook(@RequestBody Book book) {
-        return bookRepository.save(book);
+        return bookService.createBook(book);
     }
 }

@@ -35,7 +35,8 @@ public class User {
     private List<Book> readingPreferences = new ArrayList<>();
 
     public void addReadingPreference(Book book) {
-        readingPreferences.add(book);
+        if(!readingPreferences.contains(book))
+            readingPreferences.add(book);
     }
 
     public void deleteReadingPreference(Book book){
