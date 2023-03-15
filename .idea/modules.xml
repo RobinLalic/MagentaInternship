@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MagentaInternship.iml" filepath="$PROJECT_DIR$/.idea/MagentaInternship.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MagentaLoginInternshipFinal/MagentaLoginInternshipFinal.iml" filepath="$PROJECT_DIR$/MagentaLoginInternshipFinal/MagentaLoginInternshipFinal.iml" />
+    </modules>
+  </component>
+</project>
