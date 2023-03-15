@@ -33,5 +33,13 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "book_id")
     )
     private List<Book> readingPreferences = new ArrayList<>();
+
+    public void addReadingPreference(Book book) {
+        readingPreferences.add(book);
+    }
+
+    public void deleteReadingPreference(Book book){
+        readingPreferences.remove(book);
+    }
 }
 

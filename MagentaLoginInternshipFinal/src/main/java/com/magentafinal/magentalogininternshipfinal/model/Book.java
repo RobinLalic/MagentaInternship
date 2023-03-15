@@ -1,5 +1,6 @@
 package com.magentafinal.magentalogininternshipfinal.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,6 +27,7 @@ public class Book {
 
     private String genre;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "readingPreferences")
     private List<User> users = new ArrayList<>();
 
