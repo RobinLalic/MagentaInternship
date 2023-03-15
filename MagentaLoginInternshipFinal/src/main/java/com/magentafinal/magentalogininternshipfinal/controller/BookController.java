@@ -1,8 +1,6 @@
 package com.magentafinal.magentalogininternshipfinal.controller;
 
 import com.magentafinal.magentalogininternshipfinal.model.Book;
-import com.magentafinal.magentalogininternshipfinal.model.User;
-import com.magentafinal.magentalogininternshipfinal.repository.BookRepository;
 import com.magentafinal.magentalogininternshipfinal.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

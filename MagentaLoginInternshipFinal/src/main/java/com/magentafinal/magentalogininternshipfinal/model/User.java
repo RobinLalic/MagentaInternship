@@ -14,7 +14,7 @@ import java.util.List;
 @DynamicInsert
 @DynamicUpdate
 @Entity
-@Table(name = "Users") //Subject
+@Table(name = "Users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,8 +1,7 @@
 package com.magentafinal.magentalogininternshipfinal.controller;
 
 
-import com.magentafinal.magentalogininternshipfinal.repository.BookRepository;
-import com.magentafinal.magentalogininternshipfinal.repository.UserRepository;
+import com.magentafinal.magentalogininternshipfinal.service.ReadingStatisticsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,17 +14,16 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 public class ReadingStatisticsController {
-    private final UserRepository userRepository;
-    private final BookRepository bookRepository;
+    private final ReadingStatisticsService readingStatisticsService;
 
-    @GetMapping("/statistics/{genre}")
+    @GetMapping("/statistics/avgage/{genre}")
     public Double getAverageUserAgeForGenre(@PathVariable String genre) {
-        return userRepository.findAverageAgeByBookGenre(genre);
+        return readingStatisticsService.getAverageUserAgeForGenre(genre);
     }
 
     @GetMapping("/statistics/readingpercentage")
     public List<Object[]> getAuthorPercentage(){
-        return userRepository.getReadingPreferencesByAuthor();
+        return readingStatisticsService.getAuthorPercentage();
     }
 }
 
