@@ -41,5 +41,7 @@ public class User {
     public void deleteReadingPreference(Book book){
         readingPreferences.remove(book);
     }
+
+
 }
 
